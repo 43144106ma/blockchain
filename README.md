@@ -1,6 +1,6 @@
 # Clone blockchain code
-git clone https://github.com/43144106ma/blockchain.git
-cd blockchain
+1. git clone https://github.com/43144106ma/blockchain.git
+2. cd blockchain
 # Run back-end server
 1. cd server
 2. pip install pip install -r requirements.txt
