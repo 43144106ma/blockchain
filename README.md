@@ -4,21 +4,25 @@
 # Run back-end server
 1. cd server
 2. pip install pip install -r requirements.txt
-// It will running on the port 5000
+
+  // It will running on the port 5000
 
 3. py blockchain.py
-// It will running on the port 5001
+
+  // It will running on the port 5001
 
 4. py blockchain1.py 
 # Run front-end server 
 1. npm install
-// It will running on the port 8080
+
+  // It will running on the port 8080
 2. npm run dev 
 # If your device is mac
-// back-end
+  // back-end
 
 1. python blockchain.py
-// front-end
+
+  // front-end
 
 2. sudo npm install & sudo npm run dev
 # Some other suggestions:
