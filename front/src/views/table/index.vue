@@ -2,7 +2,7 @@
   <div class="app-container">
     <el-row>
       <el-col :span="4">
-        <el-select v-model="value" placeholder="请选择难度">
+        <el-select v-model="value" placeholder="choose the diff">
           <el-option
             v-for="item in options"
           :key="item.value"
@@ -13,18 +13,18 @@
         &nbsp;
       </el-col>
       <el-col :span="4">
-        <el-button type="primary" @click="handleMine()">挖矿</el-button>
+        <el-button type="primary" @click="handleMine()">mine</el-button>
       </el-col>
     </el-row>
     <p></p>
-    <tr> data:  {{res.data}}</tr>
-    <tr> hash:  {{res.hash}}</tr>
-    <tr> index:  {{res.index}}</tr>
-    <tr> message:  {{res.message}}</tr>
-    <tr> previous_hash:  {{res.previous_hash}}</tr>
-    <tr> proof:  {{res.proof}}</tr>
-    <tr> timestamp:  {{res.timestamp}}</tr>
-    <tr> transactions:  {{res.transactions}}</tr>
+    <tr v-if="res.data"> data:  {{res.data}}</tr>
+    <tr v-if="res.hash"> hash:  {{res.hash}}</tr>
+    <tr v-if="res.index"> index:  {{res.index}}</tr>
+    <tr v-if="res.message"> message:  {{res.message}}</tr>
+    <tr v-if="res.previous_hash"> previous_hash:  {{res.previous_hash}}</tr>
+    <tr v-if="res.proof"> proof:  {{res.proof}}</tr>
+    <tr v-if="res.timestamp"> timestamp:  {{res.timestamp}}</tr>
+    <tr v-if="res.transactions"> transactions:  {{res.transactions}}</tr>
   </div>
 </template>
 
@@ -46,19 +46,19 @@ export default {
     return {
       options: [{
           value: 3,
-          label: '3位验证'
+          label: '3*0'
         }, {
           value: 4,
-          label: '4位验证'
+          label: '4*0'
         }, {
           value: 5,
-          label: '5位验证'
+          label: '5*0'
         }, {
           value: 6,
-          label: '6位验证'
+          label: '6*0'
         }, {
           value: 7,
-          label: '7位验证'
+          label: '7*0'
         }],
         value: 4,
         res: {},

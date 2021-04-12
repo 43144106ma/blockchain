@@ -2,24 +2,24 @@
   <div class="app-container">
     <el-row>
       <el-col :span="6">
-        Sender: <el-input v-model="sender" placeholder="请输入Sender"></el-input>
+        Sender: <el-input v-model="sender" placeholder="please input Sender"></el-input>
       </el-col>
     </el-row>
     <p></p>
     <el-row>
       <el-col :span="6">
-        Recipient: <el-input v-model="recipient" placeholder="请输入Recipient"></el-input>
+        Recipient: <el-input v-model="recipient" placeholder="please input Recipient"></el-input>
       </el-col>
     </el-row>
     <p></p>
     <el-row>
       <el-col :span="6">
-        Amount: <el-input v-model="amount" placeholder="请输入Amount"></el-input>
+        Amount: <el-input v-model="amount" placeholder="please input Amount"></el-input>
       </el-col>
     </el-row>
     <p></p>
-    <el-button type="primary" @click="handleTransaction()">提交</el-button>
-    <p>messag: {{message}}</p>
+    <el-button type="primary" @click="handleTransaction()">submit</el-button>
+    <p v-if="message.message">message: {{message.message}}</p>
   </div>
 </template>
 
@@ -56,7 +56,7 @@ export default {
       axios.get(api).then(response => {
         const data = response;
         console.log(data)
-        this.message = data.data.message
+        this.message = data.data
       })
       // await this.$api.get(api);
     }

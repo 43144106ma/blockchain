@@ -52,7 +52,7 @@ export const constantRoutes = [
                path: "dashboard",
                name: "Dashboard",
                component: () => import("@/views/dashboard/index"),
-               meta: { title: "主页", icon: "dashboard" }
+               meta: { title: "Home", icon: "dashboard" }
              }
            ]
          },
@@ -62,25 +62,25 @@ export const constantRoutes = [
            component: Layout,
            redirect: "/example/table",
            name: "Example",
-           meta: { title: "行为", icon: "el-icon-s-help" },
+           meta: { title: "Actions", icon: "el-icon-s-help" },
            children: [
              {
                path: "table",
                name: "Table",
                component: () => import("@/views/table/index"),
-               meta: { title: "挖矿", icon: "table" }
+               meta: { title: "Mine", icon: "table" }
              },
              {
                path: "tree",
                name: "Tree",
                component: () => import("@/views/tree/index"),
-               meta: { title: "完整链", icon: "tree" }
+               meta: { title: "Chain", icon: "tree" }
              },
              {
                path: "transaction",
                name: "Transaction",
                component: () => import("@/views/transaction/index"),
-               meta: { title: "交易", icon: "form" }
+               meta: { title: "Transaction", icon: "form" }
              }
            ]
          },
@@ -90,19 +90,19 @@ export const constantRoutes = [
            component: Layout,
            redirect: "/external-link/register",
            name: "External-link",
-           meta: { title: "节点操作", icon: "link" },
+           meta: { title: "Nodes' actions", icon: "link" },
            children: [
              {
                path: "register",
                name: "Register",
                component: () => import("@/views/register/index"),
-               meta: { title: "注册节点", icon: "nested" }
+               meta: { title: "register node", icon: "nested" }
              },
              {
                path: "validate",
                name: "Validate",
                component: () => import("@/views/validate/index"),
-               meta: { title: "验证节点", icon: "form" }
+               meta: { title: "resolve node", icon: "form" }
              }
            ]
          },

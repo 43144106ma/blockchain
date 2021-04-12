@@ -2,7 +2,7 @@
   <div class="app-container">
     <el-row>
       <el-col :span="6">
-        <el-input placeholder="查看完整链" v-model="input" class="input-with-select" :disabled="true">
+        <el-input placeholder="whole chain" v-model="input" class="input-with-select" :disabled="true">
           <el-button slot="append" icon="el-icon-search" @click="handleChain()"></el-button>
         </el-input>
       </el-col>
@@ -39,22 +39,6 @@ export default {
   },
   data() {
     return {
-      options: [{
-          value: 3,
-          label: '3位验证'
-        }, {
-          value: 4,
-          label: '4位验证'
-        }, {
-          value: 5,
-          label: '5位验证'
-        }, {
-          value: 6,
-          label: '6位验证'
-        }, {
-          value: 7,
-          label: '7位验证'
-        }],
         value: 4,
         ress: {},
         input: "",
